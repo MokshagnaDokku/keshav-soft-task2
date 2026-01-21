@@ -1,45 +1,42 @@
-# Internship Task 2: Keshav Soft (Strict Tech Stack)
+# Internship Task 2 - Strict Tech Stack Implementation
 
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 ![Bundler](https://img.shields.io/badge/Bundler-Vite-purple)
 ![Templating](https://img.shields.io/badge/Templating-Handlebars-orange)
 
-## 📖 Project Overview
-This repository contains the **Task 2** submission for the Web Development Internship. [cite_start]The objective was to recreate the "Keshav Soft" corporate website (from Task 1) using a strict **Templating Engine + Bundler** architecture, rather than static HTML[cite: 3].
+## 📄 Objective
+[cite_start]The goal of this task was to recreate the deliverables from Task 1 using a strict **templating engine + bundler** combination, ensuring the final output matches the original design exactly while using professional build tools[cite: 1, 2, 3].
 
-This project moves away from manual HTML editing and uses **automation** to generate the final website.
-
-**[View Live Website](https://mokshagnadokku.github.io/keshav-soft-task2/dist/index.html)**
+**[View Live Website](https://mokshagnadokku.github.io/keshav-soft-task2/)**
 
 ---
 
-## 🛠️ Mandatory Tech Stack
-[cite_start]As per the internship requirements, I have implemented the following specific stack[cite: 6, 7, 10]:
+## 🛠️ Mandatory Technology Stack
+[cite_start]As per the task requirements, I have implemented the following specific stack[cite: 6]:
 
-### 1. Bundler: Vite
-* **Why Chosen:** Vite was selected over Gulp for its superior build speed and native ES Module support. [cite_start]It handles the compilation of assets and hot-reloading much faster than traditional task runners[cite: 11].
-* **Role:** It compiles the Handlebars templates and assets from `src/` into the final production-ready `dist/` folder.
+### [cite_start]1. Bundler: Vite [cite: 11]
+* **Selection:** Chosen as the strict bundler requirement.
+* **Role:** Vite handles the development server, hot-reloading, and bundles the assets and HTML for production. It is configured to compile the Handlebars templates into the final `dist/` folder.
 
-### 2. Templating Engine: Handlebars
-* [cite_start]**Why Chosen:** Chosen for its semantic syntax and ability to create reusable components (Partials) without complex logic[cite: 9].
-* **Role:** Used to componentize the **Navbar** and **Footer** so they can be included dynamically on every page (`{{> navbar }}`), adhering to the DRY (Don't Repeat Yourself) principle.
+### [cite_start]2. Templating Engine: Handlebars [cite: 9]
+* **Selection:** Chosen as the strict templating engine requirement.
+* **Role:** Used to componentize the layout. Standard HTML was replaced with Handlebars templates (e.g., `{{> navbar }}`), adhering to the DRY (Don't Repeat Yourself) principle.
 
 ---
 
 ## 📂 Project Structure
-[cite_start]The project follows the strict folder structure required by the task[cite: 22, 23, 24, 25]:
+[cite_start]The project follows the mandatory folder structure outlined in the task document[cite: 22]:
 
 ```text
 /keshav-soft-task2
-│── package.json         # Project dependencies and scripts
-│── vite.config.js       # Configuration for compiling Handlebars
-│── src/                 # SOURCE CODE (Development)
-│   ├── index.html       # Entry file
-│   ├── assets/          # Images and CSS
-│   └── templates/       # Handlebars Templates
-│       └── partials/    # Reusable components (Navbar, Footer)
-│── dist/                # PRODUCTION CODE (The final output)
-│   ├── index.html       # Compiled HTML
-│   └── assets/          # Optimized assets
-2026 Keshav Soft Inc.
-Built with Vite + Handlebars.
+│── src/
+│   ├── templates/       # [cite: 23] Templates and partials (Navbar, Footer)
+│   ├── assets/          # [cite: 24] Images, CSS, and JS files
+│   ├── index.html       # Entry point for Vite
+│   ├── about.html
+│   └── contact.html
+│
+│── dist/                # [cite: 25] Final compiled HTML output
+│── vite.config.js       # Configuration for Vite + Handlebars plugin
+│── package.json         # Dependencies and build scripts
+└── README.md            # Project documentation
